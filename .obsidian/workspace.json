@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "799f684838a63ecb",
+    "type": "split",
+    "children": [
+      {
+        "id": "15b7770ebd5b3aab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98e98980276bff54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "document/phase-1-plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "phase-1-plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c26b0f50c96705cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "903fae2deea921a2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af389410dc07a615",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e9a27bcc0369f91f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "39abc000efea72c7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1287264f4bda420d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8262a8a6000890b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa1db3e85ed6a0a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "document/phase-1-plan.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for phase-1-plan"
+            }
+          },
+          {
+            "id": "f5e7009db4aaedbe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "document/phase-1-plan.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from phase-1-plan"
+            }
+          },
+          {
+            "id": "1cf24cda8174ecf4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "77ad3957dede5399",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "document/phase-1-plan.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of phase-1-plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "98e98980276bff54",
+  "lastOpenFiles": [
+    "document/phase-2-plan.md",
+    "document/phase-1-plan.md",
+    "document/MyAdb - Architecture Document.md",
+    "document/MyAdb - Core Technical Specification.md",
+    "document/MyAdb - Complete Overview.md"
+  ]
+}

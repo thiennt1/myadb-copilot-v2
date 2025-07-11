@@ -1,0 +1,978 @@
+{
+    "config": {
+      "hideDetail": false,
+      "blockWidth": 150,
+      "blockHeight": 80,
+      "autoSize": true,
+      "layoutTitle": "V4K",
+      "globalInput": [
+        {
+          "inputid": "pkg",
+          "label": "V4K app package name",
+          "type": "string",
+          "value": "delfi.com.vn.mergeproject.develop"
+        },
+        {
+          "inputid": "local_parent_folder",
+          "label": "Folder in PC",
+          "type": "string",
+          "value": "D:/temp/Myadb/231207"
+        },
+        {
+          "inputid": "device_parent_folder",
+          "label": "Folder in device exclude push folder name",
+          "type": "string",
+          "value": "/sdcard"
+        },
+        {
+          "inputid": "folder_name",
+          "label": "Name of folder to pull/push",
+          "type": "string",
+          "value": "vision4k"
+        }
+      ]
+    },
+    "elements": [
+      {
+        "x": 0,
+        "y": 0,
+        "buttonLabel": "Clear Log",
+        "function": {
+          "name": "clear_log"
+        },
+        "details": "Clear screen log"
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "buttonLabel": "Restart ADB",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb kill-server",
+            "adb start-server"
+          ]
+        },
+        "details": "restart adb"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "buttonLabel": "Install Apk",
+        "function": {
+          "name": "install_apk_from_dialog",
+          "args": []
+        },
+        "details": "Install apk by select from dialog"
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "buttonLabel": "Reload MyAdb UI",
+        "function": {
+          "name": "reload",
+          "args": []
+        },
+        "details": "reload myadb ui from json file"
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "buttonLabel": "showip",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "netsh interface ip show addresses Wi-Fi"
+          ]
+        },
+        "details": "showip"
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "buttonLabel": "Connect 127.0.0.1:5555",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb connect 127.0.0.1"
+          ]
+        },
+        "details": "adb connect 127.0.0.1"
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "buttonLabel": "Connect 127.0.0.1:5605",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb connect 127.0.0.1:5605"
+          ]
+        },
+        "details": "adb connect 127.0.0.1:5605"
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "buttonLabel": "SCRCPY",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "C:\\Users\\Thien\\OneDrive\\Hinte\\Soft\\DevTool\\scrcpy-win64-v1.24\\scrcpy.exe"
+          ]
+        },
+        "details": "Screen control"
+      },
+      {
+        "x": 0,
+        "y": 9,
+        "buttonLabel": "Scroll up",
+        "function": {
+          "name": "cmd",
+          "args": [
+            " adb shell input keyevent KEYCODE_DPAD_UP"
+          ]
+        },
+        "details": "Scroll down"
+      },
+      {
+        "x": 0,
+        "y": 10,
+        "buttonLabel": "Scroll down",
+        "function": {
+          "name": "cmd",
+          "args": [
+            " adb shell input keyevent KEYCODE_DPAD_DOWN"
+          ]
+        },
+        "details": "Scroll down"
+      },
+      {
+        "x": 0,
+        "y": 11,
+        "buttonLabel": "ENTER",
+        "function": {
+          "name": "cmd",
+          "args": [
+            " adb shell input keyevent KEYCODE_ENTER"
+          ]
+        },
+        "details": "ENTER"
+      },
+      {
+        "x": 0,
+        "y": 12,
+        "buttonLabel": "Reboot",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb reboot"
+          ]
+        },
+        "details": "Reboot"
+      },
+      {
+        "x": 0,
+        "y": 13,
+        "buttonLabel": "Fake boot",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell am broadcast -a android.intent.action.BOOT_COMPLETED"
+          ]
+        },
+        "details": "Fake Reboot"
+      },
+      {
+        "x": 0,
+        "y": 14,
+        "buttonLabel": "netstats",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell dumpsys netstats"
+          ]
+        },
+        "details": "netstats"
+      },
+      {
+        "x": 0,
+        "y": 15,
+        "buttonLabel": "svc wifi disable",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell svc wifi disable"
+          ]
+        },
+        "details": "svc wifi disable"
+      },
+      {
+        "x": 0,
+        "y": 16,
+        "buttonLabel": "svc wifi enable",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell svc wifi enable"
+          ]
+        },
+        "details": "svc wifi enable"
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "buttonLabel": "Start App",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell monkey -p %pkg -c android.intent.category.LAUNCHER 1"
+          ]
+        },
+        "details": "Uninstall app"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "buttonLabel": "Clear App",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell pm clear %pkg"
+          ]
+        },
+        "details": "Clear app data"
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "buttonLabel": "Grant Permission",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell pm grant %pkg android.permission.CAMERA",
+            "adb shell pm grant %pkg android.permission.READ_PHONE_STATE",
+            "adb shell pm grant %pkg android.permission.READ_EXTERNAL_STORAGE",
+            "adb shell pm grant %pkg android.permission.WRITE_EXTERNAL_STORAGE",
+            "adb shell pm grant %pkg android.permission.ACCESS_FINE_LOCATION"
+          ]
+        },
+        "details": "Grant Permission"
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "buttonLabel": "App Setting",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS package:%pkg"
+          ]
+        },
+        "details": "Open setting on device"
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "buttonLabel": "Kill app",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell am force-stop %pkg"
+          ]
+        },
+        "details": "kill app"
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "buttonLabel": "Kill Watcher",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell am force-stop com.delfi.v4k.updatewatcher"
+          ]
+        },
+        "details": "kill Watcher"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "buttonLabel": "Uninstall App",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb uninstall %pkg"
+          ]
+        },
+        "details": "Uninstall app"
+      },
+      {
+        "x": 1,
+        "y": 7,
+        "buttonLabel": "Install App 0.2.131",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb install \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Release\\vision4k-0.2.x\\vision4k-0.2.130\\vision4k-0.2.131 apk\\vision4k-0.2.131-PROD-debug.apk\""
+          ]
+        },
+        "details": "Uninstall app"
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "buttonLabel": "WifiConfigStore",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell  cat /data/misc/wifi/WifiConfigStore.xml"
+          ]
+        },
+        "details": "show WifiConfigStore"
+      },
+      {
+        "x": 1,
+        "y": 9,
+        "buttonLabel": "Start CheckV4kService",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell am startservice com.delfi.v4k.updatewatcher/com.delfi.v4k.updatewatcher.service.CheckV4kService"
+          ]
+        },
+        "details": "Start CheckV4kService"
+      },
+      {
+        "x": 1,
+        "y": 10,
+        "buttonLabel": "Get config",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_O"
+          ]
+        },
+        "details": "Reload V4K design"
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "buttonLabel": "WifiConfigStore",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell cat /data/misc/wifi/WifiConfigStore.xml"
+          ]
+        },
+        "details": "Reload V4K design"
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "buttonLabel": "clear log",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell rm -r /sdcard/vision4k/log"
+          ]
+        },
+        "details": "clear log"
+      },
+      {
+        "x": 1,
+        "y": 13,
+        "buttonLabel": "ls log",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell ls /sdcard/vision4k/log"
+          ]
+        },
+        "details": "ls log"
+      },
+      {
+        "x": 1,
+        "y": 14,
+        "buttonLabel": "clear images",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell rm -r /sdcard/vision4k/images"
+          ]
+        },
+        "details": "clear images"
+      },
+      {
+        "x": 1,
+        "y": 15,
+        "buttonLabel": "ls images",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell ls /sdcard/vision4k/images"
+          ]
+        },
+        "details": "ls images"
+      },
+      {
+        "x": 1,
+        "y": 16,
+        "buttonLabel": "ls videos",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell ls /sdcard/vision4k/videos"
+          ]
+        },
+        "details": "ls videos"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "buttonLabel": "UPDATE V4K design",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell rm -r %device_parent_folder/%folder_name",
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push %local_parent_folder/%folder_name %device_parent_folder",
+            "adb shell input keyevent KEYCODE_I",
+            "adb shell input tap 900 500"
+          ]
+        },
+        "details": "Update V4K design"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "buttonLabel": "UPDATE design_v2_keyframe.xml",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push %local_parent_folder/%folder_name/ui/design_v2_keyframe.xml %device_parent_folder/%folder_name/ui/design_v2_keyframe.xml",
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Update V4K design"
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "buttonLabel": "UPDATE variable.json",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push %local_parent_folder/%folder_name/ui/design_v2_keyframe.xml %device_parent_folder/%folder_name/ui/design_v2_keyframe.xml",
+            "adb push %local_parent_folder/%folder_name/ui/variable.json %device_parent_folder/%folder_name/ui/variable.json",
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Update variable.json"
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "buttonLabel": "EDIT     design_v2_keyframe.xml",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "\"C:\\Program Files\\Notepad++\\notepad++.exe\" %local_parent_folder/%folder_name/ui/design_v2_keyframe.xml "
+          ]
+        },
+        "details": "Update V4K design"
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "buttonLabel": "RELOAD UI",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Reload V4K design"
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "buttonLabel": "Refresh Q",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_Q"
+          ]
+        },
+        "details": "fakeEventDesignUpdateAvailable"
+      },
+      {
+        "x": 2,
+        "y": 6,
+        "buttonLabel": "ClientReadyforSync",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_7"
+          ]
+        },
+        "details": "Reload V4K design"
+      },
+      {
+        "x": 2,
+        "y": 7,
+        "buttonLabel": "KEYCODE_ Input",
+        "function": {
+          "name": "cmd",
+          "input": [
+            {
+              "inputid": "input_keycode",
+              "label": "0",
+              "type": "string"
+            }
+          ],
+          "args": [
+            "adb shell input keyevent KEYCODE_%input_keycode"
+          ]
+        },
+        "details": "send  user input keycode"
+      },
+      {
+        "x": 2,
+        "y": 8,
+        "buttonLabel": "fakeEventDesignUpdateAvailable",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_P"
+          ]
+        },
+        "details": "send  handleReloadFile"
+      },
+      {
+        "x": 2,
+        "y": 9,
+        "buttonLabel": "fakeEventClientReadyForSync",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_7"
+          ]
+        },
+        "details": "send  fakeEventClientReadyForSync"
+      },
+      {
+        "x": 2,
+        "y": 10,
+        "buttonLabel": "KEYCODE_4",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_4"
+          ]
+        },
+        "details": "send  KEYCODE_4"
+      },
+      {
+        "x": 2,
+        "y": 11,
+        "buttonLabel": "Force EventConfigReady",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keyevent KEYCODE_O"
+          ]
+        },
+        "details": "Force EventConfigReady. send  KEYCODE_O"
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "buttonLabel": "Copy apk to usb",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "copy D:\\SourceCode\\AllGit\\DelfiGit\\Breece\\breeceVision-Android\\Vision4kAndroid\\app\build\\outputs\\apk\\debug\\vision4k-0.3.1212-DEMO-HAVE-HARDCODE-CANNOT-USE-THIS-FILE-debug.apk E:\\in\\vision4k-update.apk /y"
+          ]
+        },
+        "details": "Copy apk to usb"
+      },
+      {
+        "x": 2,
+        "y": 13,
+        "buttonLabel": "install 0.3.6",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb install -r -t -d \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Release\\vision4k-0.3.x-ELO\\vision4k-0.3.6\\vision4k-0.3.6-PROD-debug.apk\""
+          ]
+        },
+        "details": "Copy apk to usb"
+      },
+      {
+        "x": 2,
+        "y": 14,
+        "buttonLabel": "install 0.5.0100",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb install -r -t -d \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Release\\vision4k-0.5.x-Autosize\\vision4k-0.5.0090\\vision4k-0.5.0100-PROD-debug.apk\""
+          ]
+        },
+        "details": "install 0.5.0100"
+      },
+      {
+        "x": 2,
+        "y": 15,
+        "buttonLabel": "getprop ro.serialno",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell getprop ro.serialno"
+          ]
+        },
+        "details": "getprop ro.serialno"
+      },
+      {
+        "x": 2,
+        "y": 16,
+        "buttonLabel": "Scan ...",
+        "function": {
+          "name": "cmd",
+          "input": [
+            {
+              "inputid": "Scan_value",
+              "label": "0",
+              "type": "string"
+            }
+          ],
+          "args": [
+            "adb shell input text %Scan_value",
+            "adb shell input keyevent KEYCODE_ENTER"
+          ]
+        },
+        "details": "Pull %device_parent_folder/%folder_name"
+      },
+      {
+        "x": 2,
+        "y": 17,
+        "buttonLabel": "Pull",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb pull %device_parent_folder/%folder_name %local_parent_folder"
+          ]
+        },
+        "details": "Pull %device_parent_folder/%folder_name"
+      },
+      {
+        "x": 2,
+        "y": 18,
+        "buttonLabel": "Off",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell input keycode 26"
+          ]
+        },
+        "details": "Turn off screem"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "buttonLabel": "Config DJS998899002 ",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899002\",\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899002"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "buttonLabel": "Config DJS998899003",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899003\",\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899003"
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "buttonLabel": "Config DJS998899004",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899004\",\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899004"
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "buttonLabel": "Config DJS000000350",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS000000350\",\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS000000350"
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "buttonLabel": "Config DJS998899002 ",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899002\",\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"},\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899002"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "buttonLabel": "Config V4kdev & DJS998899003",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899003\",\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"},\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config V4kdev & DJS998899003"
+      },
+      {
+        "x": 3,
+        "y": 7,
+        "buttonLabel": "Config V4kdev & DJS998899004",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899004\",\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"},\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config V4kdev & DJS998899004"
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "buttonLabel": "Config DJS998899005",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899005\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899005"
+      },
+      {
+        "x": 3,
+        "y": 9,
+        "buttonLabel": "Config DJS998899006",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899006\",\"ShowDebugInfo\":-1,\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899006"
+      },
+      {
+        "x": 3,
+        "y": 10,
+        "buttonLabel": "Config DJS998899007",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899007\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899007"
+      },
+      {
+        "x": 3,
+        "y": 11,
+        "buttonLabel": "Config DJS998899008",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899008\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899009"
+      },
+      {
+        "x": 3,
+        "y": 12,
+        "buttonLabel": "Config DJS998899009",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899009"
+      },
+      {
+        "x": 3,
+        "y": 13,
+        "buttonLabel": "Config DJS998899010",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS998899010\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdev.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS998899010"
+      },
+      {
+        "x": 3,
+        "y": 14,
+        "buttonLabel": "Config DJS000000003",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS000000003\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdemo.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS000000003"
+      },
+      {
+        "x": 3,
+        "y": 15,
+        "buttonLabel": "Config DJS000000103 dev",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"DJS000000103\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4k.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config DJS000000350"
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "buttonLabel": "Config debug only",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"ShowDebugInfo\":2}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config debug only"
+      },
+      {
+        "x": 4,
+        "y": 9,
+        "buttonLabel": "Config L211A80451",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"SerialNumber\": \"L211A80451\",\"ShowDebugInfo\":2,\"ConfigurationServer\": {\"Url\":\"https://v4kdemo.breecesystem.com\"}}  > %local_parent_folder/%folder_name/config/configuration.json",
+            "adb push %local_parent_folder/%folder_name/config/configuration.json %device_parent_folder/%folder_name/config/configuration.json"
+          ]
+        },
+        "details": "Config L211A80451"
+      },
+      {
+        "x": 4,
+        "y": 10,
+        "buttonLabel": "DebugInfo IP 20",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "cmd.exe /c echo {\"host\": \"http://192.168.1.20:61820\"} > %local_parent_folder/%folder_name/config/DebugInfo.txt",
+            "adb push %local_parent_folder/%folder_name/config/DebugInfo.txt %device_parent_folder/%folder_name/config/DebugInfo.txt"
+          ]
+        },
+        "details": "DebugInfo IP 20"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "buttonLabel": "Test test-work-break_v2",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\test-work-break_v2 and test cutoff first char customfont.xml\" %device_parent_folder/%folder_name/ui/design_v2_keyframe.xml",
+            "adb push %local_parent_folder/%folder_name/ui/variable.json %device_parent_folder/%folder_name/ui/variable.json",
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Test Auto font1"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "buttonLabel": "Test Auto font ui-slide",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-slide\\design_v2_keyframe.xml\" %device_parent_folder/%folder_name/ui/design_v2_keyframe.xml",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-slide\\variable.json\" %device_parent_folder/%folder_name/ui/variable.json",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-slide\\COOPNEWTTREG.TTF\" %device_parent_folder/%folder_name/fonts/COOPNEWTTREG.TTF",
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Test Auto font1"
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "buttonLabel": "Test Auto font ui-2",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-2\\Splitscreen 1x5_v40_keyframe.xml\" %device_parent_folder/%folder_name/ui/design_v2_keyframe.xml",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-2\\variable.json\" %device_parent_folder/%folder_name/ui/variable.json",
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Test Auto font1"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "buttonLabel": "Test Auto font ui-wordwrap",
+        "function": {
+          "name": "cmd",
+          "args": [
+            "adb shell mkdir %device_parent_folder/%folder_name",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-wordwrap\\Design_v2_keyframe.xml\" %device_parent_folder/%folder_name/ui/design_v2_keyframe.xml",
+            "adb push \"C:\\Users\\Thien\\OneDrive - Delfi Technologies AS\\Data\\017. Delfi\\Projects\\Vision4k\\Document\\Features\\#17150 Auto font size\\ui-wordwrap\\variable.json\" %device_parent_folder/%folder_name/ui/variable.json",
+            "adb shell input keyevent KEYCODE_I"
+          ]
+        },
+        "details": "Test Auto font1"
+      }
+    ]
+  }
