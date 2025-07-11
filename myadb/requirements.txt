@@ -1,0 +1,3 @@
+# Required packages for MyAdb
+python-dotenv
+adb

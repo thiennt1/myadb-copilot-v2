@@ -1,8 +1,16 @@
 {
-    "servers": {
-      "git": {
-        "command": "uvx",
-        "args": ["mcp-server-git"]
-      }
-    }
+	"servers": {
+		"git": {
+			"command": "uvx",
+			"args": [
+				"mcp-server-git",
+				"--repository",
+				"https://github.com/thiennt1/myadb-copilot-v2",
+        "--branch",
+        "main"
+			],
+			"type": "stdio"
+		}
+	},
+	"inputs": []
 }
